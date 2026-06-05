@@ -409,15 +409,15 @@ def _encode_relay(model, clip, latent, global_prompt, local_prompts, segment_len
     return patched, conditioning
 
 
-class LTXDirector(io.ComfyNode):
+class KLLTXDirector(io.ComfyNode):
     """WYSIWYG timeline variant — segments and lengths come from a visual editor in the node UI."""
 
     @classmethod
     def define_schema(cls):
         return io.Schema(
-            node_id="LTXDirector",
-            display_name="LTX Director",
-            category="WhatDreamsCost",
+            node_id="KL LTXDirector",
+            display_name="KL LTX Director",
+            category="KL WhatDreamsCost",
             description=(
                 "Same as Prompt Relay Encode, but local prompts and segment lengths are edited "
                 "visually as draggable blocks on a timeline. The duration_frames input only sets the "

@@ -3,7 +3,7 @@ import torch
 import comfy.utils
 from comfy_api.latest import io
 
-class LTXSequencer(LTXVAddGuide):
+class KLLTXSequencer(LTXVAddGuide):
     @classmethod
     def define_schema(cls):
         inputs = [
@@ -52,9 +52,9 @@ class LTXSequencer(LTXVAddGuide):
             ])
 
         return io.Schema(
-            node_id="LTXSequencer",
-            display_name="LTX Sequencer",
-            category="WhatDreamsCost",
+            node_id="KL LTXSequencer",
+            display_name="KL LTX Sequencer",
+            category="KL WhatDreamsCost",
             description="Add multiple guide images at specified frame indices or seconds with strengths. Number of widgets is dynamically configured.",
             inputs=inputs,
             outputs=[

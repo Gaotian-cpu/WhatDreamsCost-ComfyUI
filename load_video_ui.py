@@ -37,7 +37,7 @@ async def upload_chunk(request):
     return web.json_response({"status": "ok"})
 
 
-class LoadVideoUI:
+class KLLoadVideoUI:
     @classmethod
     def INPUT_TYPES(s):
         return {
@@ -64,7 +64,7 @@ class LoadVideoUI:
     RETURN_TYPES = ("IMAGE", "AUDIO", "FLOAT", "INT")
     RETURN_NAMES = ("images", "audio", "duration", "frame_count")
     FUNCTION = "load_video"
-    CATEGORY = "WhatDreamsCost"
+    CATEGORY = "KL WhatDreamsCost"
 
     def load_video(self, video, frame_rate, display_mode, start_time, end_time, duration, start_frame, end_frame, duration_frames, custom_width=0, custom_height=0, resize_method="maintain aspect ratio", crop_x=0.0, crop_y=0.0, crop_w=1.0, crop_h=1.0, **kwargs):
         if not video:

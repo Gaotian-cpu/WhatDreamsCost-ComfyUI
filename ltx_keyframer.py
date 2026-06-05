@@ -2,7 +2,7 @@ import torch
 import comfy.utils
 from comfy_api.latest import io
 
-class LTXKeyframer(io.ComfyNode):
+class KLLTXKeyframer(io.ComfyNode):
     @classmethod
     def define_schema(cls):
         inputs = [
@@ -36,9 +36,9 @@ class LTXKeyframer(io.ComfyNode):
             ])
 
         return io.Schema(
-            node_id="LTXKeyframer",
-            display_name="LTX Keyframer",
-            category="WhatDreamsCost",
+            node_id="KL LTXKeyframer",
+            display_name="KL LTX Keyframer",
+            category="KL WhatDreamsCost",
             description="Replaces video latent frames with the encoded input images. Number of widgets is dynamically configured.",
             inputs=inputs,
             outputs=[
